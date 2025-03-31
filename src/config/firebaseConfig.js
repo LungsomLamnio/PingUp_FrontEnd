@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import {
   getAuth,
   RecaptchaVerifier,
-  SingInWithPhoneNumber,
+  singInWithPhoneNumber,
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -17,4 +17,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
-export { RecaptchaVerifier, SingInWithPhoneNumber };
+export { RecaptchaVerifier, singInWithPhoneNumber };
