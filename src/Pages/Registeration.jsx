@@ -1,9 +1,9 @@
 import { useState } from "react";
-import {
-  auth,
-  RecaptchaVerifier,
-  signInWithPhoneNumber,
-} from "../config/firebaseConfig";
+// import {
+//   auth,
+//   RecaptchaVerifier,
+//   signInWithPhoneNumber,
+// } from "../config/firebaseConfig";
 
 export default function Registeration() {
   let [formData, setFormData] = useState({ userName: "", phoneNumber: "" });
