@@ -5,7 +5,7 @@ export default function UserLogin() {
         className="card shadow p-4"
         style={{ width: "100%", maxWidth: "400px" }}
       >
-        <h4 className="text-center mb-3 text-primary">User Login</h4>
+        <h4 className="text-center mb-3 text-primary fw-bold">User Login</h4>
         <div className="">
           <form action="/">
             <div className="mb-3">
@@ -39,7 +39,7 @@ export default function UserLogin() {
             </div>
             <div className="text-center">
               <a href="/user-signup" className="text-decoration-none">
-                Don't have an acoount? <strong>SignUp</strong>
+                Don't have an acoount? <strong>Sign Up</strong>
               </a>
             </div>
           </form>
