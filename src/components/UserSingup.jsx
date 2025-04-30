@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function UserSignup() {
   const [formData, setFormData] = useState({
@@ -17,20 +18,36 @@ export default function UserSignup() {
     });
   };
 
-  let handleFormSubmit = (event) => {
+  let handleFormSubmit = async (event) => {
     event.preventDefault();
+
     if (formData.password !== formData.confirmPassword) {
       alert("Password do not match");
       return;
     }
-    console.log("form submitted");
-    console.log(formData);
-    setFormData({
-      username: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+    try {
+      const response = await axios.post(
+        "https://pingup-backend.onrender.com/users/signup",
+        {
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+        }
+      );
+
+      alert("User registered successfully");
+      console.log(response.data);
+
+      setFormData({
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    } catch (err) {
+      console.error("SignUp Error:", err.response?.data || err.message);
+      alert(err.response?.data?.message || "SignUp Failed");
+    }
   };
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
