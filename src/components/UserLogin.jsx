@@ -17,7 +17,7 @@ export default function UserLogin() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/login",
+        "https://pingup-backend.onrender.com/users/login",
         loginData
       );
       alert("Login Successful");
