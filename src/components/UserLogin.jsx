@@ -77,7 +77,7 @@ export default function UserLogin() {
             </div>
             <div className="text-center">
               <a
-                href="https://pingup-backend.onrender.com/user-signup"
+                href="https://pingup-backend.onrender.com/users/signup"
                 className="text-decoration-none"
               >
                 Don't have an acoount? <strong>Sign Up</strong>
