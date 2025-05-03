@@ -7,7 +7,7 @@ export default function ChatPage() {
   const [newMessage, setNewMessage] = useState("");
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:3001", {
+    socketRef.current = io("https://pingup-backend.onrender.com", {
       transports: ["websocket"],
     });
 
