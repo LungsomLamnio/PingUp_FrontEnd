@@ -121,11 +121,13 @@ export default function UserSignup() {
               Sign Up
             </button>
           </div>
-          <div className="text-center">
-            <a href="/user-login" className="text-decoration-none">
-              Already have an account? <strong>Login</strong>
-            </a>
-          </div>
+          <span
+            className="text-decoration-none text-primary"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/user-login")}
+          >
+            Already have an account? <strong>Login</strong>
+          </span>
         </form>
       </div>
     </div>
