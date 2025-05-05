@@ -29,7 +29,8 @@ export default function UserSignup() {
     }
     try {
       const response = await axios.post(
-        "https://pingup-backend.onrender.com/users/signup",
+        // "https://pingup-backend.onrender.com/users/signup",
+        "http://localhost:3001/users/signup",
         {
           username: formData.username,
           email: formData.email,
