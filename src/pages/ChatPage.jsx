@@ -8,8 +8,9 @@ export default function ChatPage() {
 
   useEffect(() => {
     // socketRef.current = io("https://pingup-backend.onrender.com", {
-    socketRef.current = io("http://localhost:3001", {
-      transports: ["websocket"],
+    const socket = io("http://localhost:3001", {
+      transports: ["websocket"], // 💡 This forces WebSocket, skipping polling
+      withCredentials: true,
     });
 
     socketRef.current.on("receive_message", (data) => {
